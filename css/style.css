@@ -1,17 +1,14 @@
-@import url(''); 
-
+@import url("");
 
 /* Custom.scss */
 /* Option A: Include all of Bootstrap */
-
-@import 
 
 /*Add custom code after this */
 
 body {
   margin-left: 5px;
- }
- /*
+}
+/*
   * this is the same as writing
   * body { margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;}
   * I'm adding px here for clarity sake but the unit is not really needed if you have 0
@@ -19,111 +16,126 @@ body {
   * the rules are always clockwise: top, right, bottom, left
  */
 
-
-
-
 /*Meniu :About      style CSS*/
 
- .pozamea {
-  
-    border-radius: 50%;
-       display: block;
+.pozamea {
+  border-radius: 50%;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 10%;
-
 }
 
-  /*Meniu:Experience       style css*/
-   h2.experience {
-    text-align: center;
-    margin: 20px 0 20px 0;
-    color: blue;
-    font-size: 1rem;
-    font-weight: bold;
-      }
-   p.experiencetext {
-        display: block;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        text-indent: 20px;
-    }
-    /*MENU:About      style css*/ 
-    h2.about {
-        text-align: left;
-        margin: 20px 0 20px 0;
-        color: blue;
-        font-size: 1rem;
-        font-weight: bold;
-          }
-          p.text1 {
-            display: block;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            text-indent: 20px;
-        }
+/*Meniu:Experience       style css*/
+h2.experience {
+  text-align: center;
+  margin: 20px 0 20px 0;
+  color: blue;
+  font-size: 1rem;
+  font-weight: bold;
+}
+p.experiencetext {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-indent: 20px;
+}
+/*MENU:About      style css*/
+h2.about {
+  text-align: left;
+  margin: 20px 0 20px 0;
+  color: blue;
+  font-size: 1rem;
+  font-weight: bold;
+}
+p.text1 {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-indent: 20px;
+}
 
- /*Footer*/
- .footer {
-   position:static;
-   width :100%;
-   bottom: 0;
-    background-color: #40474e;
-   color: white;
-   padding: 1rem 0 1rem;
-   margin-top: 1rem;
-   
- }
- footer img {
-   height: 1rem;
-   margin:1.5rem 0;
- }
- footer a {
-   color: white;
- }
- footer svg.svg-inline--fa {
-   font-size: 1.6rem;
-   margin: 1.2rem;
- }
-  .fa-facebook-square {
-    background-image: url("");
-  }
+/*Footer*/
+.footer {
+  position: static;
+  width: 100%;
+  bottom: 0;
+  background-color: #40474e;
+  color: white;
+  padding: 1rem 0 1rem;
+  margin-top: 1rem;
+}
+footer img {
+  height: 1rem;
+  margin: 1.5rem 0;
+}
+footer a {
+  color: white;
+}
+footer svg.svg-inline--fa {
+  font-size: 1.6rem;
+  margin: 1.2rem;
+}
+.fa-facebook-square {
+  background-image: url("");
+}
 
-  
- /*Logo IA*/
-  .center2 {
+/*Logo IA*/
+.center2 {
+  align-items: center;
+}
 
-    align-items: center;
-  }
-
-
-  /*Contact  form style*/
-  .contact_me	{
-		background: white_background;
-		color: black;
-		padding-top: 50px;
-		padding-bottom: 50px;
-  }
-  input{
-	   display: block;
-		margin-bottom: 20px;
-	}
-  textarea{
-     display: block;
-    margin-bottom: 20px;
-  }
+/*Contact  form style*/
+.contact_me {
+  background: white_background;
+  color: black;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+input {
+  display: block;
+  margin-bottom: 20px;
+}
+textarea {
+  display: block;
+  margin-bottom: 20px;
+}
 
 /*bootstrap imag*/
 
 .container {
-  position: absolute;
-  z-index: 2;
-  top: 70%; 
+  z-index: -1;
+
   bottom: 0.5%;
   right: 10%;
   color: black;
+}
+
+/* article Jonas */
+img {
+  align-items: center;
+}
+
+.media .avatar {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.media .media-body {
+  padding-left: 8px;
+}
+.media .media-body label {
+  font-weight: 600;
+  color: #fc5356;
+  margin: 0;
+}
+.media .media-body span {
+  display: block;
+  font-size: 12px;
 }
