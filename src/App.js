@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import './App.css'; // stilurile tale personalizate
+import { Helmet } from "react-helmet";
 
 function App() {
   const [activeTab, setActiveTab] = useState('about');
@@ -11,6 +12,26 @@ function App() {
     const persoana = 'Vasile';
     return varsta + 10;
   }
+
+
+
+  useEffect(() => {
+    // Crează script-ul Google Analytics dinamic
+    const script = document.createElement('script');
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-DMMFEKYF50";
+    script.async = true;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DMMFEKYF50');
+
+    // Cleanup dacă vrei să-l elimini la demontare
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className="App container my-4">
