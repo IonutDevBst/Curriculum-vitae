@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import './App.css'; // stilurile tale personalizate
 import { Helmet } from "react-helmet";
+import MyPicture from './../src/pictures/mypicture.jpg'
+import DataBase from '../src/pictures/databaseimg.png'
+import BootstrapLogo from '../src/pictures/bootstrap.jpeg'
+import todoList from '../src/pictures/todolistLogo.png'
 
 function App() {
   const [activeTab, setActiveTab] = useState('about');
@@ -16,22 +20,21 @@ function App() {
 
 
   useEffect(() => {
-    // Crează script-ul Google Analytics dinamic
     const script = document.createElement('script');
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-DMMFEKYF50";
-    script.async = true;
+    script.innerHTML = `
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KJM8J4SP');
+    `;
     document.head.appendChild(script);
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){window.dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DMMFEKYF50');
-
-    // Cleanup dacă vrei să-l elimini la demontare
+  
     return () => {
       document.head.removeChild(script);
     };
   }, []);
+  
 
   return (
     <div className="App container my-4">
@@ -74,22 +77,22 @@ function App() {
             <p>My background is in Civil Engineering, yet I switched to the field of IT.</p>
 
             <div className="mypicture">
-              <img className="pozamea" src="pictures/mypicture.jpg" alt="LA" style={{ width: "15%" }} />
+              <img className="pozamea" src={MyPicture} alt="LA" style={{ width: "15%" }} />
 
               <div className="container center">
                 <div className="row">
                   <div className="col order-last">
-                    <img src="pictures/todolist.jfif" alt="todolist" style={{ width: "35%" }} />
+                    <img src={todoList} alt="todolist" style={{ width: "35%" }} />
                     <h2>Todo list</h2>
                     <p>Todo list app challenge in Bootstrap with Firestore database integration.</p>
                   </div>
                   <div className="col">
-                    <img src="pictures/databaseimg.png" alt="databaseimg" style={{ width: "50%" }} />
+                    <img src={DataBase} alt="databaseimg" style={{ width: "50%" }} />
                     <h2>Movie-database</h2>
                     <p>Example frontend to visualize database interaction.</p>
                   </div>
                   <div className="col order-first">
-                    <img src="pictures/bootsrapimag.jfif" alt="bootsrapimag" style={{ width: "50%" }} />
+                    <img src={BootstrapLogo} alt="bootsrapimag" style={{ width: "50%" }} />
                     <h2>Bootstrap</h2>
                     <p>Bootstrap is a powerful front-end framework used to create modern websites and web apps.</p>
                   </div>
